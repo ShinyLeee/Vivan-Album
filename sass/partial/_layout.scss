@@ -47,7 +47,7 @@
     background-color: $contentColor;
 }
 #vContainer {
-    width: 800px;
+    width: 880px;
     height: auto;
     margin: auto;
 }
@@ -58,11 +58,11 @@
     &::after {
         position: absolute;
         display: block;
-        height: 1px;
         content: "";
         background: #000 repeat scroll;
     }
 }
+/*-----------控制各图片框的hover效果和提示线条-----------*/
 .frame1 {
     & > .intro1 {
         @include transition(transform .3s ease);
@@ -79,6 +79,68 @@
         }
         & > .intro1 {
             @include transform(translateX(-15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+.frame2 {
+    & > .intro2 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        left: $frameSmallPicHeight*$frame2PicProportion/2;
+        top: 90px;
+        height: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateY(15px));
+        }
+        & > .intro2 {
+            @include transform(translateY(15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+.frame3 {
+    & > .intro3 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        right: 15+$frameSmallPicHeight*$frame3PicProportion/2;
+        bottom: 90px;
+        height: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateY(-15px));
+        }
+        & > .intro3 {
+            @include transform(translateY(-15px));
         }
         & .border-top {
             @include transform(translateY(15px));
@@ -125,6 +187,68 @@
         }
     }
 }
+.frame5 {
+    & > .intro5 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        left: $frameSmallPicHeight*$frame5PicProportion/2;
+        bottom: 90px;
+        height: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateY(-15px));
+        }
+        & > .intro5 {
+            @include transform(translateY(-15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+.frame6 {
+    & > .intro6 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        right: 15+$frameSmallPicHeight*$frame6PicProportion/2;
+        top: 90px;
+        height: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateY(15px));
+        }
+        & > .intro6 {
+            @include transform(translateY(15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
 .frame7 {
     & > .intro7 {
         @include transition(transform .3s ease);
@@ -156,17 +280,42 @@
         }
     }
 }
+/*-----------控制各图片框的位置和宽高大小-----------*/
 #yearSeries {
     left: 10px;
     top: 10px;
     width: $frameBigPicHeight*$frame1PicProportion;
     height: $frameBigPicHeight;
 }
+#monthSeries {
+    left: 0;
+    bottom: 0;
+    width: $frameSmallPicHeight*$frame2PicProportion;
+    height: $frameSmallPicHeight;
+}
+#daySeries {
+    right: 15px;
+    top: 0;
+    width: $frameSmallPicHeight*$frame3PicProportion;
+    height: $frameSmallPicHeight;
+}
 #typeSeries {
     right: 0;
     top: 10px;
     width: $frameBigPicHeight*$frame4PicProportion;
     height: $frameBigPicHeight;
+}
+#loverSeries {
+    left: 0;
+    top: 0;
+    width: $frameSmallPicHeight*$frame5PicProportion;
+    height: $frameSmallPicHeight;
+}
+#friendSeries {
+    right: 0;
+    bottom: 0;
+    width: $frameSmallPicHeight*$frame6PicProportion;
+    height: $frameSmallPicHeight;
 }
 #colorSeries {
     left: 10px;
@@ -215,10 +364,29 @@
         }
         & > .border-bottom {
             left: 0;
-            top: $frameBigPicHeight;
+            bottom: -15px;
             width: $frameBigPicHeight*$frame1PicProportion;
             height: 15px;
         }
+    }
+}
+/*-----------控制垂直框的遮挡border的宽高-----------*/
+.series-vertical {
+    & > .border > .border-top {
+        width: $frameSmallPicHeight*$frame2PicProportion;
+        height: 15px;
+    }
+    & > .border > .border-left {
+        width: 15px;
+        height: $frameSmallPicHeight;
+    }
+    & > .border > .border-right {
+        width: 15px;
+        height: $frameSmallPicHeight;
+    }
+    & > .border > .border-bottom {
+        width: $frameSmallPicHeight*$frame2PicProportion;
+        height: 15px;
     }
 }
 .intro {
@@ -232,34 +400,65 @@
         text-align: center;
     }
 }
+/*-----------控制各提示文字框的位置-----------*/
 .intro1,.intro7 {
     left: 550px;
     top: 170px;
+}
+.intro2 {
+    left: 55px;
+    top: -20px;
+}
+.intro3 {
+    right: 90px;
+    bottom: -20px;
+    & > h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
 .intro4 {
     right: 540px;
     top: 170px;
 }
+.intro5 {
+    left: 34px;
+    bottom: -20px;
+    & > h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+.intro6 {
+    right: 29.5px;
+    top: -10px;
+    & > h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
 .frame1,.frame4,.frame7 {
     margin: auto;
-    width: 800px;
+    width: 880px;
     height: 400px;
-    margin-bottom: 40px;
-    background-color: #fff;
+    margin-bottom: 120px;
+    &::after {
+        height: 1px;
+    }
 }
 .frame2,.frame3,.frame5,.frame6 {
-    width: 360px;
-    height: 450px;
-    margin-bottom: 40px;
-    background-color: #fff;
+    width: 440px;
+    height: 520px;
+    margin-bottom: 120px;
+    &::after {
+        width: 1px;
+    }
 }
 .frame2,.frame5 {
     float: left;
-    margin-right: 20px;
 }
 .frame3,.frame6 {
     float: right;
-    margin-left: 20px;
 }
 
 /*-----------------Footer--------------------*/

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -77,7 +78,7 @@
 }
 
 #vContainer {
-  width: 800px;
+  width: 880px;
   height: auto;
   margin: auto;
 }
@@ -90,11 +91,11 @@
 .frame::after {
   position: absolute;
   display: block;
-  height: 1px;
   content: "";
   background: #000 repeat scroll;
 }
 
+/*-----------控制各图片框的hover效果和提示线条-----------*/
 .frame1 > .intro1 {
   -moz-transition: -moz-transform 0.3s ease;
   -o-transition: -o-transform 0.3s ease;
@@ -141,6 +142,110 @@
   transform: translateX(-15px);
 }
 .frame1:hover .border-bottom {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+.frame2 > .intro2 {
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame2::after {
+  left: 169.57404px;
+  top: 90px;
+  height: 96px;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame2:hover::after {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame2:hover > .intro2 {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame2:hover .border-top {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame2:hover .border-left {
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.frame2:hover .border-right {
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+.frame2:hover .border-bottom {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+.frame3 > .intro3 {
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame3::after {
+  right: 182.63636px;
+  bottom: 90px;
+  height: 96px;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame3:hover::after {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+.frame3:hover > .intro3 {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+.frame3:hover .border-top {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame3:hover .border-left {
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.frame3:hover .border-right {
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+.frame3:hover .border-bottom {
   -moz-transform: translateY(-15px);
   -ms-transform: translateY(-15px);
   -webkit-transform: translateY(-15px);
@@ -199,6 +304,110 @@
   transform: translateY(-15px);
 }
 
+.frame5 > .intro5 {
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame5::after {
+  left: 144px;
+  bottom: 90px;
+  height: 96px;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame5:hover::after {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+.frame5:hover > .intro5 {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+.frame5:hover .border-top {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame5:hover .border-left {
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.frame5:hover .border-right {
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+.frame5:hover .border-bottom {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+.frame6 > .intro6 {
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame6::after {
+  right: 148.40249px;
+  top: 90px;
+  height: 96px;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frame6:hover::after {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame6:hover > .intro6 {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame6:hover .border-top {
+  -moz-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  -webkit-transform: translateY(15px);
+  transform: translateY(15px);
+}
+.frame6:hover .border-left {
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.frame6:hover .border-right {
+  -moz-transform: translateX(-15px);
+  -ms-transform: translateX(-15px);
+  -webkit-transform: translateX(-15px);
+  transform: translateX(-15px);
+}
+.frame6:hover .border-bottom {
+  -moz-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  -webkit-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
 .frame7 > .intro7 {
   -moz-transition: -moz-transform 0.3s ease;
   -o-transition: -o-transform 0.3s ease;
@@ -251,6 +460,7 @@
   transform: translateY(-15px);
 }
 
+/*-----------控制各图片框的位置和宽高大小-----------*/
 #yearSeries {
   left: 10px;
   top: 10px;
@@ -258,11 +468,39 @@
   height: 350px;
 }
 
+#monthSeries {
+  left: 0;
+  bottom: 0;
+  width: 339.14807px;
+  height: 400px;
+}
+
+#daySeries {
+  right: 15px;
+  top: 0;
+  width: 335.27273px;
+  height: 400px;
+}
+
 #typeSeries {
   right: 0;
   top: 10px;
   width: 476.19048px;
   height: 350px;
+}
+
+#loverSeries {
+  left: 0;
+  top: 0;
+  width: 288px;
+  height: 400px;
+}
+
+#friendSeries {
+  right: 0;
+  bottom: 0;
+  width: 266.80498px;
+  height: 400px;
 }
 
 #colorSeries {
@@ -318,8 +556,26 @@
 }
 .series > .border > .border-bottom {
   left: 0;
-  top: 350px;
+  bottom: -15px;
   width: 481.79916px;
+  height: 15px;
+}
+
+/*-----------控制垂直框的遮挡border的宽高-----------*/
+.series-vertical > .border > .border-top {
+  width: 339.14807px;
+  height: 15px;
+}
+.series-vertical > .border > .border-left {
+  width: 15px;
+  height: 400px;
+}
+.series-vertical > .border > .border-right {
+  width: 15px;
+  height: 400px;
+}
+.series-vertical > .border > .border-bottom {
+  width: 339.14807px;
   height: 15px;
 }
 
@@ -335,9 +591,24 @@
   text-align: center;
 }
 
+/*-----------控制各提示文字框的位置-----------*/
 .intro1, .intro7 {
   left: 550px;
   top: 170px;
+}
+
+.intro2 {
+  left: 55px;
+  top: -20px;
+}
+
+.intro3 {
+  right: 90px;
+  bottom: -20px;
+}
+.intro3 > h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .intro4 {
@@ -345,29 +616,49 @@
   top: 170px;
 }
 
+.intro5 {
+  left: 34px;
+  bottom: -20px;
+}
+.intro5 > h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.intro6 {
+  right: 29.5px;
+  top: -10px;
+}
+.intro6 > h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 .frame1, .frame4, .frame7 {
   margin: auto;
-  width: 800px;
+  width: 880px;
   height: 400px;
-  margin-bottom: 40px;
-  background-color: #fff;
+  margin-bottom: 120px;
+}
+.frame1::after, .frame4::after, .frame7::after {
+  height: 1px;
 }
 
 .frame2, .frame3, .frame5, .frame6 {
-  width: 360px;
-  height: 450px;
-  margin-bottom: 40px;
-  background-color: #fff;
+  width: 440px;
+  height: 520px;
+  margin-bottom: 120px;
+}
+.frame2::after, .frame3::after, .frame5::after, .frame6::after {
+  width: 1px;
 }
 
 .frame2, .frame5 {
   float: left;
-  margin-right: 20px;
 }
 
 .frame3, .frame6 {
   float: right;
-  margin-left: 20px;
 }
 
 /*-----------------Footer--------------------*/
