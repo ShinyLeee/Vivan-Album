@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+    font-size: 100%;
+}
+//清除闭合浮动
+.clear-fix:after {
+    display: block;
+    content: "\200B";
+    height: 0;
+    clear: both;
+}
+.clear-fix {
+    *zoom: 1;
+}

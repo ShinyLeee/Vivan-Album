@@ -1,0 +1,308 @@
+.wrapper {
+    width: 100%;
+}
+/*---------------Header------------------*/
+#vHeader {
+    min-height: 400px;
+    height: 400px;
+    background-image: url(../img/dark-pattern.png);
+    background-repeat: repeat;
+}
+.signWrap {
+    width: 40%;
+    height: 100%;
+    margin: auto;
+    padding-top: 80px;
+    line-height: 20px;
+    & > .vSign {
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        margin-bottom: 30px;
+        & img {
+        width: 100%;
+    }
+    }
+    & > h4 {
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 20px;
+        & > a {
+            font-family: "Antipasto","lucida grande";
+            letter-spacing: 6px;
+            color: #fff;
+        }
+    }
+    & > button {
+        display: block;
+        margin: auto;
+    }
+}
+/*---------------mainContent------------------*/
+#vBody {
+    padding-top: 120px;
+    min-height: 800px;
+    background-color: $contentColor;
+}
+#vContainer {
+    width: 800px;
+    height: auto;
+    margin: auto;
+}
+.frame {
+    position:relative;
+    padding: 10px;
+    overflow: hidden;
+    &::after {
+        position: absolute;
+        display: block;
+        height: 1px;
+        content: "";
+        background: #000 repeat scroll;
+    }
+}
+.frame1 {
+    & > .intro1 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        left: -50+$frameBigPicHeight*$frame1PicProportion;
+        top: 210px;
+        width: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateX(-15px));
+        }
+        & > .intro1 {
+            @include transform(translateX(-15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+.frame4 {
+    & > .intro4 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        right: -50+$frameBigPicHeight*$frame4PicProportion;
+        top: 210px;
+        width: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateX(15px));
+        }
+        & > .intro4 {
+            @include transform(translateX(15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+.frame7 {
+    & > .intro7 {
+        @include transition(transform .3s ease);
+    } 
+    &::after {
+        left: -30+$frameBigPicHeight*$frame7PicProportion;
+        top: 210px;
+        width: 96px;
+        @include transition(transform .3s ease);
+    }
+    &:hover {
+        &::after {
+            @include transform(translateX(-15px));
+        }
+        & > .intro7 {
+            @include transform(translateX(-15px));
+        }
+        & .border-top {
+            @include transform(translateY(15px));
+        }
+        & .border-left {
+            @include transform(translateX(15px));
+        }
+        & .border-right {
+            @include transform(translateX(-15px));
+        }
+        & .border-bottom {
+            @include transform(translateY(-15px));
+        }
+    }
+}
+#yearSeries {
+    left: 10px;
+    top: 10px;
+    width: $frameBigPicHeight*$frame1PicProportion;
+    height: $frameBigPicHeight;
+}
+#typeSeries {
+    right: 0;
+    top: 10px;
+    width: $frameBigPicHeight*$frame4PicProportion;
+    height: $frameBigPicHeight;
+}
+#colorSeries {
+    left: 10px;
+    top: 10px;
+    width: $frameBigPicHeight*$frame7PicProportion;
+    height: $frameBigPicHeight;
+}
+.series {
+    position: absolute;
+    display: block;
+    margin-right: 15px;
+    & > img {
+        width: 100%;
+        height: 100%;
+    }
+    & > .border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        & > span {
+            position: absolute;
+            display: block;
+            background-color: $contentColor;
+            background-repeat: repeat;
+            @include transition(transform, .3s, ease);
+        }
+        & > .border-top {
+            left: 0;
+            top: -15px;
+            width: $frameBigPicHeight*$frame1PicProportion;
+            height: 15px;  
+        }
+        & > .border-left {
+            left: -15px;
+            top: 0;
+            width: 15px;
+            height: $frameBigPicHeight;       
+        }
+        & > .border-right {
+            right: -15px;
+            top: 0;
+            width: 15px;
+            height: $frameBigPicHeight;
+        }
+        & > .border-bottom {
+            left: 0;
+            top: $frameBigPicHeight;
+            width: $frameBigPicHeight*$frame1PicProportion;
+            height: 15px;
+        }
+    }
+}
+.intro {
+    position:absolute;
+    & a {
+        font-family: "Austion Roman",times,"times new roman",serif;
+        color: #000;
+        font-size: 36px;
+    }
+    & > span {
+        text-align: center;
+    }
+}
+.intro1,.intro7 {
+    left: 550px;
+    top: 170px;
+}
+.intro4 {
+    right: 540px;
+    top: 170px;
+}
+.frame1,.frame4,.frame7 {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+.frame2,.frame3,.frame5,.frame6 {
+    width: 360px;
+    height: 450px;
+    margin-bottom: 40px;
+    background-color: #fff;
+}
+.frame2,.frame5 {
+    float: left;
+    margin-right: 20px;
+}
+.frame3,.frame6 {
+    float: right;
+    margin-left: 20px;
+}
+
+/*-----------------Footer--------------------*/
+#vFooter {
+    min-height: 300px;
+    padding: 100px;
+    border-top: solid 1px #999;
+    padding-bottom: 0;
+    & > p {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        text-align: center;
+        color: #999999;
+        color: rgba(0, 0, 0, .3);
+    }
+}
+.vContact {
+    & > .vSign {
+        width: 180px;
+        height: 26px;
+        margin: auto;
+        text-align: center;
+        & > img {
+        width: 26px;
+        height: 26px;
+        margin-right: 10px;
+        }
+        & > img:last-child {
+            @include transform(rotate(180deg));
+        }
+    }
+    & > h4 {
+        padding-top: 40px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    & > .btnGroup {
+        padding-top: 40px;
+        text-align: center;
+    }
+}
+
+
+
